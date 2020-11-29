@@ -1,5 +1,8 @@
 # kiogood
  
+  osx用です。
+ windows版はwinブランチにあります
+ 
  VJ_at_20191208  
  youtube
  
