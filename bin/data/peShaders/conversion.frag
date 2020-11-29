@@ -1,9 +1,10 @@
-#version 410
+#version 400
 
 #define PI 3.14159265358979
 
 
 uniform sampler2D tex0; ////this is "draw in the shader"
+uniform sampler2D tex1;
 
 in vec2 varyingtexcoord;
 out vec4 outputColor;
@@ -35,9 +36,9 @@ void main (void){
     float limit = 0.0300;
     float shift = min(u_val0, limit);
     
-    float r = texture(tex0,uv + tornado(shift)).r;
-    float g = texture(tex0,uv).g;
-    float b = texture(tex0,uv - tornado(shift)).b;
+    float r = texture(tex1,uv + tornado(shift)).r;
+    float g = texture(tex1,uv).g;
+    float b = texture(tex1,uv - tornado(shift)).b;
     
     vec3 col = vec3(r, g, b);
     

@@ -3,29 +3,29 @@
 #include "displayApp.hpp"
 
 //========================================================================
-int main( ){
-    ofGLFWWindowSettings settings;
-    settings.setGLVersion(4,1);
-    
-    //å¤–éƒ¨ãƒ¢ãƒ‹ã‚¿ãƒ¼ã«è¡¨ç¤ºã™ã‚‹ãŸã‚ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
-    settings.setSize(1080, 720);
-    settings.setPosition(ofVec2f(100,100));
-    shared_ptr<ofAppBaseWindow> displayWindow = ofCreateWindow(settings);
-    
-    //GUIãªã©ã‚’è¡¨ç¤ºã™ã‚‹ãƒ¡ã‚¤ãƒ³ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦
-    settings.setSize(1080, 360);
-    settings.setPosition(ofVec2f(600,300));
-    settings.shareContextWith = displayWindow;
-    settings.resizable = false;
-    shared_ptr<ofAppBaseWindow> mainWindow = ofCreateWindow(settings);
-    
-    //ä¸¡è€…ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å…±æœ‰ã™ã‚‹ãŸã‚ã®ãƒã‚¤ãƒ³ã‚¿
-    shared_ptr<ofApp> mainApp(new ofApp);
-    shared_ptr<DisplayApp> displayApp(new DisplayApp);
-    displayApp->mainObj = mainApp;
-    
-    //ãƒ«ãƒ¼ãƒ—ã‚¹ã‚¿ãƒ¼ãƒˆ
-    ofRunApp(displayWindow, displayApp);
-    ofRunApp(mainWindow, mainApp);
-    ofRunMainLoop();
+int main() {
+	ofGLFWWindowSettings settings;
+	settings.setGLVersion(4, 0);
+
+	//ŠO•”ƒ‚ƒjƒ^[‚É•\¦‚·‚é‚½‚ß‚ÌƒEƒBƒ“ƒhƒE
+	settings.setSize(1080, 720);
+	settings.setPosition(ofVec2f(100, 100));
+	shared_ptr<ofAppBaseWindow> displayWindow = ofCreateWindow(settings);
+
+	//GUI‚È‚Ç‚ğ•\¦‚·‚éƒƒCƒ“ƒEƒBƒ“ƒhƒE
+	settings.setSize(1080, 360);
+	settings.setPosition(ofVec2f(600, 300));
+	settings.shareContextWith = displayWindow;
+	settings.resizable = false;
+	shared_ptr<ofAppBaseWindow> mainWindow = ofCreateWindow(settings);
+
+	//—¼Ò‚ÌƒIƒuƒWƒFƒNƒg‚ğ‹¤—L‚·‚é‚½‚ß‚Ìƒ|ƒCƒ“ƒ^
+	shared_ptr<ofApp> mainApp(new ofApp);
+	shared_ptr<DisplayApp> displayApp(new DisplayApp);
+	displayApp->mainObj = mainApp;
+
+	//ƒ‹[ƒvƒXƒ^[ƒg
+	ofRunApp(displayWindow, displayApp);
+	ofRunApp(mainWindow, mainApp);
+	ofRunMainLoop();
 }

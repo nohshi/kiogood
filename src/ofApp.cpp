@@ -1,241 +1,248 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------åˆæœŸåŒ–
-void ofApp::setup(){
-    ofSetVerticalSync(true);
-    ofSetFrameRate(30);
-    
-    //----------------------------GUIåˆæœŸè¨­å®š
-    gui.setup();
-    gui.setName("main");
-    gui.add(g_screenAlph.setup("screenAlph", 255, 0, 255));
-    gui.add(g_liveCodingAlph.setup("liveCodingAlph", 0, 0, 255));
-    gui.add(g_amp.setup("amp", 0, 0, 1));
-    gui.add(g_bPostEffects.setup("bPostEffects",false));
-    gui.add(peId.setup("PostEffectsID", 0, 0, 9));
-    gui.add(g_effectsVal.setup("effectsVal", 0, 0, 1));
+//--------------------------------------------------------------‰Šú‰»
+void ofApp::setup() {
+	//ofSetLogLevel(OF_LOG_VERBOSE);
 
-    gui.setPosition(10, 30);
-    
-    //----------------------------ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®åˆæœŸè¨­å®š
-    wBorder.gui.setPosition(220, 30);
-    nMeta.gui.setPosition(440, 30);
-    liveCoder.gui.setPosition(20, 300);
-    
-    //----------------------------FBO
-    ofFbo::Settings setting;
-    setting.width = 1080;
-    setting.height = 720;
-    setting.internalformat = GL_RGB32F;
-    setting.numSamples = 0;
-    setting.wrapModeVertical = GL_REPEAT;
-    setting.wrapModeHorizontal = GL_REPEAT;
-    setting.textureTarget = GL_TEXTURE_2D;
-    setting.minFilter = GL_LINEAR;
-    setting.maxFilter = GL_LINEAR;
-    displayFbo.allocate(setting);
-    
-    //-----------------------------ãƒã‚¹ãƒˆãƒ•ã‚§ã‚¯ãƒˆåˆæœŸè¨­å®š/ã‚·ã‚§ãƒ¼ãƒ€èª­ã¿è¾¼ã¿
-    pe.setFbo(&displayFbo);
-    pe.load("peShaders/shader.vert", "peShaders/conversion.frag");
-    pe.load("peShaders/shader.vert", "peShaders/mono.frag");
-    pe.load("peShaders/shader.vert", "peShaders/mosaic.frag");
-    pe.load("peShaders/shader.vert", "peShaders/dots.frag");
-    pe.load("peShaders/shader.vert", "peShaders/disp.frag");
-    pe.load("peShaders/shader.vert", "peShaders/reverese.frag");
-    pe.load("peShaders/shader.vert", "peShaders/dispReverse.frag");
-    pe.load("peShaders/shader.vert", "peShaders/shift.frag");
-    pe.load("peShaders/shader.vert", "peShaders/shiftConversion.frag");
-    pe.load("peShaders/shader.vert", "peShaders/kaleido.frag");
-    
-    
-    //---------------------------------------éŸ³å…¥åŠ›åˆæœŸè¨­å®š
-    //soundStream.printDeviceList();
-    int bufferSize = 512;
-    
-    left.assign(bufferSize, 0.0);
-    right.assign(bufferSize, 0.0);
-    
-    smoothedVol     = 0.0;
-    scaledVol        = 0.0;
-    
-    ofSoundStreamSettings settings;
-    auto devices = soundStream.getMatchingDevices("default");
-    if(!devices.empty()){
-        settings.setInDevice(devices[0]);
-    }
-    
-    settings.setInListener(this);
-    settings.sampleRate = 44100;
-    settings.numOutputChannels = 0;
-    settings.numInputChannels = 2;
-    settings.bufferSize = bufferSize;
-    soundStream.setup(settings);
+	ofSetVerticalSync(false);
+	ofSetFrameRate(60);
+
+	//----------------------------GUI‰Šúİ’è
+	gui.setup();
+	gui.setName("main");
+	gui.add(g_screenAlph.setup("screenAlph", 255, 0, 255));
+	gui.add(g_liveCodingAlph.setup("liveCodingAlph", 0, 0, 255));
+	gui.add(g_amp.setup("amp", 0, 0, 1));
+	gui.add(g_bPostEffects.setup("bPostEffects", false));
+	gui.add(peId.setup("PostEffectsID", 0, 0, 9));
+	gui.add(g_effectsVal.setup("effectsVal", 0, 0, 1));
+
+	gui.setPosition(10, 30);
+
+	//----------------------------ƒRƒ“ƒeƒ“ƒc‚Ì‰Šúİ’è
+	wBorder.gui.setPosition(220, 30);
+	nMeta.gui.setPosition(440, 30);
+	liveCoder.gui.setPosition(20, 300);
+
+	//----------------------------FBO
+	ofDisableArbTex();
+	ofFbo::Settings setting;
+	setting.width = 1080;
+	setting.height = 720;
+	setting.internalformat = GL_RGB32F;
+	setting.numSamples = 0;
+	setting.wrapModeVertical = GL_REPEAT;
+	setting.wrapModeHorizontal = GL_REPEAT;
+	setting.textureTarget = GL_TEXTURE_2D;
+	setting.minFilter = GL_LINEAR;
+	setting.maxFilter = GL_LINEAR;
+	displayFbo.allocate(setting);
+	ofEnableArbTex();
+
+	//-----------------------------ƒ|ƒXƒgƒtƒFƒNƒg‰Šúİ’è/ƒVƒF[ƒ_“Ç‚İ‚İ
+	pe.setFbo(&displayFbo);
+	pe.load("peShaders/shader.vert", "peShaders/conversion.frag");
+	pe.load("peShaders/shader.vert", "peShaders/mono.frag");
+	pe.load("peShaders/shader.vert", "peShaders/mosaic.frag");
+	pe.load("peShaders/shader.vert", "peShaders/dots.frag");
+	pe.load("peShaders/shader.vert", "peShaders/disp.frag");
+	pe.load("peShaders/shader.vert", "peShaders/reverese.frag");
+	pe.load("peShaders/shader.vert", "peShaders/dispReverse.frag");
+	pe.load("peShaders/shader.vert", "peShaders/shift.frag");
+	pe.load("peShaders/shader.vert", "peShaders/shiftConversion.frag");
+	pe.load("peShaders/shader.vert", "peShaders/kaleido.frag");
+
+
+	//---------------------------------------‰¹“ü—Í‰Šúİ’è
+	//soundStream.printDeviceList();
+	int bufferSize = 512;
+
+	left.assign(bufferSize, 0.0);
+	right.assign(bufferSize, 0.0);
+
+	smoothedVol = 0.0;
+	scaledVol = 0.0;
+
+	ofSoundStreamSettings settings;
+	auto devices = soundStream.getMatchingDevices("default");
+	if (!devices.empty()) {
+		settings.setInDevice(devices[0]);
+	}
+
+	settings.setInListener(this);
+	settings.sampleRate = 44100;
+	settings.numOutputChannels = 0;
+	settings.numInputChannels = 2;
+	settings.bufferSize = bufferSize;
+	soundStream.setup(settings);
 }
 
-//--------------------------------------------------------------æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹ã‚„ã¤
-void ofApp::update(){
-    //lets scale the vol up to a 0-1 range
-    //éŸ³é‡ã®èª¿æ•´ã¨liveCoderã¸éŸ³ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’æ¸¡ã™
-    scaledVol = ofMap(smoothedVol, 0.0, 0.17, 0.0, 1.0, true);
-    liveCoder.val0 = g_amp*vol;
-    liveCoder.val1 = g_amp*scaledVol;
-    
-    //displayFbo.begin()/end()ã«æŒŸã¾ã‚ŒãŸdraw()é–¢æ•°ã§
-    //ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚’displayFboã«æ›¸ãè¾¼ã‚€
-    displayFbo.begin();
-        //å‰ãƒ•ãƒ¬ãƒ¼ãƒ ã®å†…å®¹ã‚’ã‚¯ãƒªã‚¢
-        ofSetColor(0,255);
-        ofDrawRectangle(0, 0, displayFbo.getWidth(), displayFbo.getHeight());
-    
-        //ä»¥ä¸‹ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã®æ›¸ãè¾¼ã¿
-        ofSetColor(255,255);
-        wBorder.draw();
-        nMeta.draw();
-        ballEmitter.setEmitPosition(glm::vec3(displayFbo.getWidth()/540*ofGetMouseX(),
-                                              displayFbo.getHeight()/360*ofGetMouseY(), 0) );
-        ballEmitter.update();
-        ballEmitter.draw();
-    
-        ofSetColor(255, g_liveCodingAlph);
-        liveCoder.draw();
-    
-        //ãƒã‚¹ãƒˆã‚¨ãƒ•ã‚§ã‚¯ãƒˆã‚’ã‹ã‘ã‚‹
-        if(g_bPostEffects) {
-            pe.setUniformVal0(g_amp*vol);
-            pe.setUniformVal1(g_effectsVal);
-            pe.draw(peId);
-        }
-    displayFbo.end();
+//--------------------------------------------------------------–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é‚â‚Â
+void ofApp::update() {
+	//lets scale the vol up to a 0-1 range
+	//‰¹—Ê‚Ì’²®‚ÆliveCoder‚Ö‰¹ƒpƒ‰ƒ[ƒ^‚ğ“n‚·
+	scaledVol = ofMap(smoothedVol, 0.0, 0.17, 0.0, 1.0, true);
+	liveCoder.val0 = g_amp * vol;
+	liveCoder.val1 = g_amp * scaledVol;
+
+	//displayFbo.begin()/end()‚É‹²‚Ü‚ê‚½draw()ŠÖ”‚Å
+	//ƒRƒ“ƒeƒ“ƒc‚ğdisplayFbo‚É‘‚«‚Ş
+	displayFbo.begin();
+	//‘OƒtƒŒ[ƒ€‚Ì“à—e‚ğƒNƒŠƒA
+	ofSetColor(0, 255);
+	ofDrawRectangle(0, 0, displayFbo.getWidth(), displayFbo.getHeight());
+
+	//ˆÈ‰ºƒRƒ“ƒeƒ“ƒc‚Ì‘‚«‚İ
+	ofSetColor(255, 255);
+	wBorder.draw();
+	nMeta.draw();
+	ballEmitter.setEmitPosition(glm::vec3(displayFbo.getWidth() / 540 * ofGetMouseX(),
+		displayFbo.getHeight() / 360 * ofGetMouseY(), 0));
+	ballEmitter.update();
+	ballEmitter.draw();
+
+	ofSetColor(255, g_liveCodingAlph);
+	liveCoder.draw();
+
+	displayFbo.end();
+
+	//ƒ|ƒXƒgƒGƒtƒFƒNƒg‚ğ‚©‚¯‚é
+	if (g_bPostEffects) {
+		displayFbo.begin();
+		pe.setUniformVal0(g_amp*vol);
+		pe.setUniformVal1(g_effectsVal);
+		pe.draw(peId);
+		displayFbo.end();
+	}
 }
 
-//--------------------------------------------------------------æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹ã‚„ã¤
-//ã“ã“ã§å‘¼ã°ã‚ŒãŸdraw()é–¢æ•°ã§ãƒ¡ã‚¤ãƒ³ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã¸æãã“ã‚€
-void ofApp::draw(){
-    ofSetColor(255);
-    displayFbo.draw(0, 0, 540, 360); //ä»Šã®ç”»é¢ã®çŠ¶æ…‹ã‚’ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼
-    liveCoder.draw(540, 0, 540, 360); //ãƒ©ã‚¤ãƒ–ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ç”¨ã®ã‚·ã‚§ãƒ¼ãƒ€ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼
-    
-    //-----------------GUIã®æç”»
-    ofSetColor(255);
-    gui.draw();
-    wBorder.drawGui();
-    nMeta.drawGui();
-    liveCoder.drawGui();
-    ofSetColor(255-g_screenAlph);
-    ofDrawBitmapString("fps : " + ofToString(ofGetFrameRate()), 700, 30);
-    ofDrawBitmapString("volume : " + ofToString(vol), 700, 100);
-    int sum = 0;
-    for (const auto & pt : ballEmitter.balls) {
-        if (pt.bActive) {
-            sum ++ ;
-        }
-    }
-    ofDrawBitmapString("ballNum : " + ofToString(sum), 700, 200);
+//--------------------------------------------------------------–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é‚â‚Â
+//‚±‚±‚ÅŒÄ‚Î‚ê‚½draw()ŠÖ”‚ÅƒƒCƒ“ƒfƒBƒXƒvƒŒƒC‚Ö•`‚«‚±‚Ş
+void ofApp::draw() {
+	ofSetColor(255);
+	displayFbo.draw(0, 0, 540, 360); //¡‚Ì‰æ–Ê‚Ìó‘Ô‚ğƒvƒŒƒrƒ…[
+	liveCoder.draw(540, 0, 540, 360); //ƒ‰ƒCƒuƒR[ƒfƒBƒ“ƒO—p‚ÌƒVƒF[ƒ_ƒvƒŒƒrƒ…[
+
+	//-----------------GUI‚Ì•`‰æ
+	ofSetColor(255);
+	gui.draw();
+	wBorder.drawGui();
+	nMeta.drawGui();
+	liveCoder.drawGui();
+	ofSetColor(255 - g_screenAlph);
+	ofDrawBitmapString("fps : " + ofToString(ofGetFrameRate()), 700, 30);
+	ofDrawBitmapString("volume : " + ofToString(vol), 700, 100);
+	int sum = 0;
+	for (const auto & pt : ballEmitter.balls) {
+		if (pt.bActive) {
+			sum++;
+		}
+	}
+	ofDrawBitmapString("ballNum : " + ofToString(sum), 700, 200);
 }
 
-//--------------------------------------------------------------çµ‚äº†æ™‚ã«å‘¼ã°ã‚Œã‚‹ã‚„ã¤
-void ofApp::exit(){
-    soundStream.stop(); //éŸ³å…¥åŠ›ç”¨ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ã‚¹ãƒˆãƒƒãƒ—ã™ã‚‹
+//--------------------------------------------------------------I—¹‚ÉŒÄ‚Î‚ê‚é‚â‚Â
+void ofApp::exit() {
+	soundStream.stop(); //‰¹“ü—Í—p‚ÌƒIƒuƒWƒFƒNƒg‚ğƒXƒgƒbƒv‚·‚é
 }
 
-//--------------------------------------------------------------//éŸ³ã®å‡¦ç†
-//å…¬å¼ã®ã‚‚ã®ã‚’ã‹ãªã‚Šã‚³ãƒ”ãƒšã—ãŸã€‚512ãƒãƒ³ãƒ‰ã®ã‚¹ãƒšã‚¯ãƒˆãƒ©ãƒ ã‚’æ¯ãƒ•ãƒ¬ãƒ¼ãƒ æä¾›ã™ã‚‹
-void ofApp::audioIn(ofSoundBuffer & input){
-    
-    float curVol = 0.0;
-    
-    // samples are "interleaved"
-    int numCounted = 0;
-    
-    //lets go through each sample and calculate the root mean square which is a rough way to calculate volume
-    for (size_t i = 0; i < input.getNumFrames(); i++){
-        left[i]        = input[i*2]*0.5;
-        right[i]    = input[i*2+1]*0.5;
-        
-        curVol += left[i] * left[i];
-        curVol += right[i] * right[i];
-        numCounted+=2;
-    }//cout << input.getNumFrames() << endl;
-    
-    //this is how we get the mean of rms :)
-    curVol /= (float)numCounted;
-    
-    // this is how we get the root of rms :)
-    curVol = sqrt( curVol );
-    
-    smoothedVol *= 0.93;
-    smoothedVol += 0.07 * curVol;
-    
-    vol=curVol;
+//--------------------------------------------------------------//‰¹‚Ìˆ—
+//Œö®‚Ì‚à‚Ì‚ğ‚©‚È‚èƒRƒsƒy‚µ‚½B512ƒoƒ“ƒh‚ÌƒXƒyƒNƒgƒ‰ƒ€‚ğ–ˆƒtƒŒ[ƒ€’ñ‹Ÿ‚·‚é
+void ofApp::audioIn(ofSoundBuffer & input) {
+
+	float curVol = 0.0;
+
+	// samples are "interleaved"
+	int numCounted = 0;
+
+	//lets go through each sample and calculate the root mean square which is a rough way to calculate volume
+	for (size_t i = 0; i < input.getNumFrames(); i++) {
+		left[i] = input[i * 2] * 0.5;
+		right[i] = input[i * 2 + 1] * 0.5;
+
+		curVol += left[i] * left[i];
+		curVol += right[i] * right[i];
+		numCounted += 2;
+	}//cout << input.getNumFrames() << endl;
+
+	//this is how we get the mean of rms :)
+	curVol /= (float)numCounted;
+
+	// this is how we get the root of rms :)
+	curVol = sqrt(curVol);
+
+	smoothedVol *= 0.93;
+	smoothedVol += 0.07 * curVol;
+
+	vol = curVol;
 }
 
-//ä»¥ä¸‹ãƒã‚¦ã‚¹ã€ã‚­ãƒ¼ã‚¤ãƒ™ãƒ³ãƒˆé–¢æ•°
+//ˆÈ‰ºƒ}ƒEƒXAƒL[ƒCƒxƒ“ƒgŠÖ”
 //--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-    if (key=='f') ofToggleFullscreen(); //ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³åŒ–
-    if (key==' ') liveCoder.reload(); //ãƒ©ã‚¤ãƒ–ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã®ã‚·ã‚§ãƒ¼ãƒ€ã‚’ãƒªãƒ­ãƒ¼ãƒ‰
-    if (key=='p') nMeta.bPika = !nMeta.bPika; //ãƒ¡ã‚¿ãƒœãƒ¼ãƒ«ã®ãƒ†ã‚¯ã‚¹ãƒãƒ£å¤‰æ›´
-    
-    //ãƒã‚¹ãƒˆã‚¨ãƒ•ã‚§ã‚¯ãƒˆ åˆ‡ã‚Šæ›¿ãˆ
-    if (key=='0') peId = 0;
-    if (key=='1') peId = 1;
-    if (key=='2') peId = 2;
-    if (key=='3') peId = 3;
-    if (key=='4') peId = 4;
-    if (key=='5') peId = 5;
-    if (key=='6') peId = 6;
-    if (key=='7') peId = 7;
-    if (key=='8') peId = 8;
-    if (key=='9') peId = 9;
-}
+void ofApp::keyPressed(int key) {
+	if (key == 'f') ofToggleFullscreen(); //ƒtƒ‹ƒXƒNƒŠ[ƒ“‰»
+	if (key == ' ') liveCoder.reload(); //ƒ‰ƒCƒuƒR[ƒfƒBƒ“ƒO‚ÌƒVƒF[ƒ_‚ğƒŠƒ[ƒh
+	if (key == 'p') nMeta.bPika = !nMeta.bPika; //ƒƒ^ƒ{[ƒ‹‚ÌƒeƒNƒXƒ`ƒƒ•ÏX
 
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
+	//ƒ|ƒXƒgƒGƒtƒFƒNƒg Ø‚è‘Ö‚¦
+	if (key == '0') peId = 0;
+	if (key == '1') peId = 1;
+	if (key == '2') peId = 2;
+	if (key == '3') peId = 3;
+	if (key == '4') peId = 4;
+	if (key == '5') peId = 5;
+	if (key == '6') peId = 6;
+	if (key == '7') peId = 7;
+	if (key == '8') peId = 8;
+	if (key == '9') peId = 9;
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
+void ofApp::keyReleased(int key) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
+void ofApp::mouseMoved(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
+void ofApp::mousePressed(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
+void ofApp::mouseReleased(int x, int y, int button) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
+void ofApp::mouseEntered(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
+void ofApp::mouseExited(int x, int y) {
 
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::windowResized(int w, int h) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg) {
+
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo) {
 
 }

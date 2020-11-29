@@ -1,0 +1,84 @@
+﻿  ballEmitter.cpp
+  displayApp.cpp
+  main.cpp
+  ofApp.cpp
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\displayapp.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\ballemitter.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\utils\ofutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\utils\ofutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\utils\ofutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\utils\ofutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec3f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec2f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec3f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec2f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec3f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec2f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec3f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofvec2f.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(326): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(331): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(326): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(331): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(326): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(331): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(326): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(331): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(912): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(912): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(913): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(913): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(914): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(914): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(915): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(915): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(912): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(913): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(914): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(915): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(912): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(913): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(914): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\libs\openframeworks\math\ofmatrix4x4.h(915): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\timer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\brushrenderer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\Contents\ballEmitter.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\nikometaball.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\nikometaball.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\waveborder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\waveborder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\livecoder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\livecoder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\posteffects.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\posteffects.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\nikometaball.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\ballemitter.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\timer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\ballemitter.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\timer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\waveborder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\brushrenderer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\livecoder.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\brushrenderer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\ofApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\posteffects.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\displayapp.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\main.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\ballemitter.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\timer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\utils\brushrenderer.hpp : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (ソース ファイルをコンパイルしています src\displayApp.cpp)
+c:\users\fujita\documents\openframeworks\of_v0.11.0_vs2017_release_mt\apps\hobbies\kiogood\src\contents\ballemitter.hpp(78): warning C4172: ローカル変数またはテンポラリのアドレスを返します: y
+     ライブラリ bin\kiogood.lib とオブジェクト bin\kiogood.exp を作成中
+  LINK : /LTCG が指定されましたが、コードの生成は必要ありません。リンク コマンド ラインから /LTCG を削除し、リンカーの性能を改善してください。
+  kiogood.vcxproj -> C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\kiogood.exe
+  
+  	                   2	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\libs\fmodex\lib\vs\x64\
+  	  *EXTRA File 		 6942208	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\FreeImage.dll
+  	  *EXTRA File 		   74752	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\rtaudio.dll
+  
+  	                   1	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\libs\FreeImage\lib\vs\x64\
+  	  *EXTRA File 		 1503232	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\fmodex64.dll
+  	  *EXTRA File 		 1552384	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\fmodexL64.dll
+  	  *EXTRA File 		   74752	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\rtaudio.dll
+  
+  	                   1	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\libs\rtAudio\lib\vs\x64\
+  	  *EXTRA File 		 1503232	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\fmodex64.dll
+  	  *EXTRA File 		 1552384	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\fmodexL64.dll
+  	  *EXTRA File 		 6942208	C:\Users\fujita\Documents\openFrameworks\of_v0.11.0_vs2017_release_MT\apps\hobbies\kiogood\bin\FreeImage.dll

@@ -9,53 +9,53 @@
 #include "postEffects.hpp"
 #include "ballEmitter.hpp"
 
-class ofApp : public ofBaseApp{
+class ofApp : public ofBaseApp {
 
-	public:
-		void setup(); //åˆæœŸåŒ–
-		void update(); //æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹ã‚„ã¤
-		void draw(); //æ¯ãƒ•ãƒ¬ãƒ¼ãƒ å‘¼ã°ã‚Œã‚‹ã‚„ã¤ã€ãƒ¡ã‚¤ãƒ³ãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã¸ã®æç”»ç”¨
-        void exit(); //çµ‚äº†æ™‚ã«å‘¼ã°ã‚Œã‚‹ã‚„ã¤
-        void audioIn(ofSoundBuffer & input); //éŸ³ã®å‡¦ç†
+public:
+	void setup(); //‰Šú‰»
+	void update(); //–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é‚â‚Â
+	void draw(); //–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é‚â‚ÂAƒƒCƒ“ƒfƒBƒXƒvƒŒƒC‚Ö‚Ì•`‰æ—p
+	void exit(); //I—¹‚ÉŒÄ‚Î‚ê‚é‚â‚Â
+	void audioIn(ofSoundBuffer & input); //‰¹‚Ìˆ—
 
-        //ä»¥ä¸‹ãƒã‚¦ã‚¹ã€ã‚­ãƒ¼ã‚¤ãƒ™ãƒ³ãƒˆé–¢æ•°
-		void keyPressed(int key);
-		void keyReleased(int key);
-		void mouseMoved(int x, int y );
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void mouseEntered(int x, int y);
-		void mouseExited(int x, int y);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
-		
-    //-------------guié–¢ä¿‚
-    ofxPanel gui;
-    ofxFloatSlider g_screenAlph, g_liveCodingAlph, g_effectsVal;
-    ofxToggle g_bPostEffects;
-    ofxIntSlider peId;
-    
-    //-------------displayAppã«é€ã‚‹ç”¨ã®fbo
-    ofFbo displayFbo;
-    
-    //---------------éŸ³
-    vector <float> left; //å·¦ãƒãƒ£ãƒ³ãƒãƒ«
-    vector <float> right; //å³ãƒãƒ£ãƒ³ãƒãƒ«
-    float smoothedVol; //å¹³æ»‘åŒ–ã—ãŸéŸ³é‡
-    float vol; //ç¾ãƒ•ãƒ¬ãƒ¼ãƒ ã§å—ã‘å–ã£ãŸéŸ³é‡
-    float scaledVol; //smoothedVolã‚’èª¿æ•´ã—ãŸã‚‚ã®
-    ofSoundStream soundStream; //éŸ³ç”¨ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
-    ofxFloatSlider g_amp; //éŸ³é‡èª¿æ•´ç”¨ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿
-    
-    //-------------Assets ã‚³ãƒ³ãƒ†ãƒ³ãƒ„
-    WaveBorder wBorder; //æ³¢ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ
-    NikoMetaball nMeta; //ãƒ¡ã‚¿ãƒœãƒ¼ãƒ«
-    LiveCoder liveCoder; //ãƒ©ã‚¤ãƒ–ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚°ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ
-    BallEmitter ballEmitter; //ãƒ‘ãƒ¼ãƒ†ã‚£ã‚¯ãƒ«
-    
-    //----------post effects
-    PostEffects pe;
-    
+	//ˆÈ‰ºƒ}ƒEƒXAƒL[ƒCƒxƒ“ƒgŠÖ”
+	void keyPressed(int key);
+	void keyReleased(int key);
+	void mouseMoved(int x, int y);
+	void mouseDragged(int x, int y, int button);
+	void mousePressed(int x, int y, int button);
+	void mouseReleased(int x, int y, int button);
+	void mouseEntered(int x, int y);
+	void mouseExited(int x, int y);
+	void windowResized(int w, int h);
+	void dragEvent(ofDragInfo dragInfo);
+	void gotMessage(ofMessage msg);
+
+	//-------------guiŠÖŒW
+	ofxPanel gui;
+	ofxFloatSlider g_screenAlph, g_liveCodingAlph, g_effectsVal;
+	ofxToggle g_bPostEffects;
+	ofxIntSlider peId;
+
+	//-------------displayApp‚É‘—‚é—p‚Ìfbo
+	ofFbo displayFbo;
+
+	//---------------‰¹
+	vector <float> left; //¶ƒ`ƒƒƒ“ƒlƒ‹
+	vector <float> right; //‰Eƒ`ƒƒƒ“ƒlƒ‹
+	float smoothedVol; //•½ŠŠ‰»‚µ‚½‰¹—Ê
+	float vol; //Œ»ƒtƒŒ[ƒ€‚Åó‚¯æ‚Á‚½‰¹—Ê
+	float scaledVol; //smoothedVol‚ğ’²®‚µ‚½‚à‚Ì
+	ofSoundStream soundStream; //‰¹—p‚ÌƒIƒuƒWƒFƒNƒg
+	ofxFloatSlider g_amp; //‰¹—Ê’²®—p‚Ìƒpƒ‰ƒ[ƒ^
+
+	//-------------Assets ƒRƒ“ƒeƒ“ƒc
+	WaveBorder wBorder; //”gƒGƒtƒFƒNƒg
+	NikoMetaball nMeta; //ƒƒ^ƒ{[ƒ‹
+	LiveCoder liveCoder; //ƒ‰ƒCƒuƒR[ƒfƒBƒ“ƒOƒGƒtƒFƒNƒg
+	BallEmitter ballEmitter; //ƒp[ƒeƒBƒNƒ‹
+
+	//----------post effects
+	PostEffects pe;
+
 };

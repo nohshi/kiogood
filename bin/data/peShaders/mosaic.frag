@@ -1,5 +1,4 @@
-#version 410
-
+#version 400
 #pragma include "util.glsl"
 
 #define PI 3.14159265358979

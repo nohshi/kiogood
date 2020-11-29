@@ -1,4 +1,4 @@
-#version 410
+#version 400
 
 #pragma include "noise.glsl"
 #pragma include "util.glsl"

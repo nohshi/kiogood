@@ -1,4 +1,4 @@
-#version 150
+#version 400
 
 
 uniform vec4 globalColor;
