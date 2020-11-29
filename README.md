@@ -1,5 +1,6 @@
 # kiogood
- 
+ windows版です。
+  
  VJ_at_20191208  
  youtube
  
